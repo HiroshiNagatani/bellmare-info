@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --bell-blue: #00a0e9;
-  --bell-navy: #0b2c4a;
-  --bell-sky: #5ec8f2;
-  --bell-foam: #e8f6fc;
-  --bell-deep: #061824;
-  --bell-text: #0f2a3d;
-  --bell-muted: #5a7a8f;
+  --bell-green: #7ac143;
+  --bell-deep: #1a4d28;
+  --bell-lime: #a8e063;
+  --bell-foam: #eef8e6;
+  --bell-ink: #14261a;
+  --bell-text: #1a3320;
+  --bell-muted: #5e7a62;
 }
 
 body {
   background:
-    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(0, 160, 233, 0.35), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(94, 200, 242, 0.28), transparent 50%),
-    linear-gradient(165deg, #f3fafd 0%, #dceef8 45%, #c5e4f4 100%);
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(122, 193, 67, 0.38), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(168, 224, 99, 0.32), transparent 50%),
+    linear-gradient(165deg, #f3faee 0%, #e2f3d4 45%, #cfeab8 100%);
   color: var(--bell-text);
   min-height: 100vh;
 }
@@ -59,10 +59,10 @@ body {
 .brand-wave {
   background: linear-gradient(
     120deg,
-    var(--bell-navy) 0%,
-    var(--bell-blue) 40%,
-    var(--bell-sky) 70%,
-    var(--bell-navy) 100%
+    var(--bell-deep) 0%,
+    var(--bell-green) 40%,
+    var(--bell-lime) 70%,
+    var(--bell-deep) 100%
   );
   background-size: 200% 200%;
   animation: wave-shift 8s ease-in-out infinite alternate;

@@ -9,7 +9,7 @@ interface AccountTabsProps {
 }
 
 const categoryColors: Record<BellmareAccount["category"], string> = {
-  official: "bg-[#dff2fb] text-[#0b2c4a] border-[#9fd4ef]",
+  official: "bg-[#e5f5d8] text-[#1a4d28] border-[#a8d48a]",
   academy: "bg-[#e6f7ee] text-[#1a5c3a] border-[#a8d9bc]",
   info: "bg-[#eef2f6] text-[#334155] border-[#cbd5e1]",
 };
@@ -28,8 +28,8 @@ export function AccountTabs({
           onClick={() => onModeChange("all")}
           className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
             mode === "all"
-              ? "bg-[#00a0e9] text-white shadow-md"
-              : "bg-white/80 text-[#0b2c4a] border border-[#b8d9eb] hover:bg-[#e8f6fc]"
+              ? "bg-[#7ac143] text-white shadow-md"
+              : "bg-white/80 text-[#1a4d28] border border-[#c0dbb0] hover:bg-[#eef8e6]"
           }`}
         >
           公式アカウント
@@ -38,8 +38,8 @@ export function AccountTabs({
           onClick={() => onModeChange("search")}
           className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
             mode === "search"
-              ? "bg-[#0b2c4a] text-white shadow-md"
-              : "bg-white/80 text-[#0b2c4a] border border-[#b8d9eb] hover:bg-[#e8f6fc]"
+              ? "bg-[#1a4d28] text-white shadow-md"
+              : "bg-white/80 text-[#1a4d28] border border-[#c0dbb0] hover:bg-[#eef8e6]"
           }`}
         >
           #湘南ベルマーレ 検索
@@ -52,8 +52,8 @@ export function AccountTabs({
             onClick={() => onSelect("all")}
             className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
               selected === "all"
-                ? "bg-[#0b2c4a] text-white border-[#0b2c4a] shadow"
-                : "bg-white/80 text-[#0b2c4a] border-[#b8d9eb] hover:bg-[#e8f6fc]"
+                ? "bg-[#1a4d28] text-white border-[#1a4d28] shadow"
+                : "bg-white/80 text-[#1a4d28] border-[#c0dbb0] hover:bg-[#eef8e6]"
             }`}
           >
             すべて
@@ -64,7 +64,7 @@ export function AccountTabs({
               onClick={() => onSelect(account.handle)}
               className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
                 selected === account.handle
-                  ? "bg-[#0b2c4a] text-white border-[#0b2c4a] shadow"
+                  ? "bg-[#1a4d28] text-white border-[#1a4d28] shadow"
                   : `${categoryColors[account.category]} hover:opacity-80`
               }`}
               title={account.description}

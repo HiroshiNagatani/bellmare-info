@@ -93,13 +93,13 @@ export function TweetFeed() {
       />
 
       {mode === "all" && selectedInfo && (
-        <p className="text-xs text-[#5a7a8f] bg-white/50 rounded-lg px-3 py-2">
+        <p className="text-xs text-[#5e7a62] bg-white/50 rounded-lg px-3 py-2">
           {selectedInfo.description}
         </p>
       )}
 
       <div className="flex items-center justify-between">
-        <p className="text-xs text-[#5a7a8f]">
+        <p className="text-xs text-[#5e7a62]">
           {loading
             ? "読み込み中..."
             : `${tweets.length}件の投稿を表示`}
@@ -109,7 +109,7 @@ export function TweetFeed() {
             void fetchTweets();
           }}
           disabled={loading}
-          className="text-xs font-bold text-[#0b2c4a] bg-white/80 px-3 py-1.5 rounded-full border border-[#b8d9eb] hover:bg-[#e8f6fc] disabled:opacity-50 transition-colors"
+          className="text-xs font-bold text-[#1a4d28] bg-white/80 px-3 py-1.5 rounded-full border border-[#c0dbb0] hover:bg-[#eef8e6] disabled:opacity-50 transition-colors"
         >
           更新
         </button>
@@ -118,7 +118,7 @@ export function TweetFeed() {
       {loading && (
         <div className="flex flex-col items-center py-12 gap-3">
           <div className="h-10 w-10 rounded-full brand-wave animate-float" />
-          <p className="text-sm text-[#5a7a8f] animate-pulse-soft">
+          <p className="text-sm text-[#5e7a62] animate-pulse-soft">
             ベルマーレ情報を取得中...
           </p>
         </div>
@@ -139,7 +139,7 @@ export function TweetFeed() {
       )}
 
       {!loading && !error && tweets.length === 0 && (
-        <div className="text-center py-12 text-[#5a7a8f]">
+        <div className="text-center py-12 text-[#5e7a62]">
           <p className="text-sm">投稿が見つかりませんでした</p>
         </div>
       )}

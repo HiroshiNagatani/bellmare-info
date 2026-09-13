@@ -61,7 +61,7 @@ function TweetMediaImage({
   } else {
     image = (
       <div
-        className={`relative w-full min-w-0 overflow-hidden rounded-xl bg-[#e8f6fc] ${
+        className={`relative w-full min-w-0 overflow-hidden rounded-xl bg-[#eef8e6] ${
           single ? "aspect-[4/3] max-h-72" : "aspect-square max-h-40"
         }`}
       >
@@ -95,7 +95,7 @@ export function TweetCard({ tweet }: { tweet: Tweet }) {
   const singleMedia = media.length === 1;
 
   return (
-    <article className="min-w-0 overflow-hidden bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-[#b8d9eb] hover:shadow-md transition-shadow">
+    <article className="min-w-0 overflow-hidden bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-[#c0dbb0] hover:shadow-md transition-shadow">
       <div className="flex items-start gap-3 min-w-0">
         {tweet.author.avatar_url ? (
           <Image
@@ -106,33 +106,33 @@ export function TweetCard({ tweet }: { tweet: Tweet }) {
             className="rounded-full shrink-0"
           />
         ) : (
-          <div className="w-11 h-11 rounded-full bg-[#00a0e9] shrink-0 flex items-center justify-center text-white text-xs font-bold">
+          <div className="w-11 h-11 rounded-full bg-[#7ac143] shrink-0 flex items-center justify-center text-white text-xs font-bold">
             BM
           </div>
         )}
 
         <div className="flex-1 min-w-0 overflow-hidden">
           <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="font-bold text-[#0f2a3d] text-sm">
+            <span className="font-bold text-[#1a3320] text-sm">
               {tweet.author.name}
             </span>
             {tweet.author.verified && (
-              <span className="text-[#00a0e9] text-xs">✓</span>
+              <span className="text-[#7ac143] text-xs">✓</span>
             )}
             <a
               href={`https://x.com/${tweet.author.screen_name}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#5a7a8f] text-xs hover:underline"
+              className="text-[#5e7a62] text-xs hover:underline"
             >
               @{tweet.author.screen_name}
             </a>
-            <span className="text-[#5a7a8f] text-xs ml-auto">
+            <span className="text-[#5e7a62] text-xs ml-auto">
               {formatDate(tweet.timestamp, tweet.created_at)}
             </span>
           </div>
 
-          <p className="mt-2 text-sm text-[#0f2a3d] whitespace-pre-wrap leading-relaxed break-words">
+          <p className="mt-2 text-sm text-[#1a3320] whitespace-pre-wrap leading-relaxed break-words">
             {tweet.text}
           </p>
 
@@ -150,7 +150,7 @@ export function TweetCard({ tweet }: { tweet: Tweet }) {
             </div>
           )}
 
-          <div className="mt-3 flex items-center gap-4 text-xs text-[#5a7a8f]">
+          <div className="mt-3 flex items-center gap-4 text-xs text-[#5e7a62]">
             <span>💬 {formatCount(tweet.replies)}</span>
             <span>🔁 {formatCount(tweet.retweets)}</span>
             <span>❤️ {formatCount(tweet.likes)}</span>
@@ -158,7 +158,7 @@ export function TweetCard({ tweet }: { tweet: Tweet }) {
               href={tweet.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-auto text-[#00a0e9] hover:text-[#0b2c4a] font-semibold shrink-0"
+              className="ml-auto text-[#7ac143] hover:text-[#1a4d28] font-semibold shrink-0"
             >
               Xで見る →
             </a>

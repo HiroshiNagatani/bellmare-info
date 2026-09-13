@@ -59,7 +59,7 @@ export function NewsFeed() {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between gap-3">
-        <p className="text-xs text-[#5a7a8f]">
+        <p className="text-xs text-[#5e7a62]">
           {loading
             ? "読み込み中..."
             : fetchedAt
@@ -69,7 +69,7 @@ export function NewsFeed() {
         <button
           onClick={fetchNews}
           disabled={loading}
-          className="text-xs font-bold text-[#0b2c4a] bg-white/80 px-3 py-1.5 rounded-full border border-[#b8d9eb] hover:bg-[#e8f6fc] disabled:opacity-50 transition-colors"
+          className="text-xs font-bold text-[#1a4d28] bg-white/80 px-3 py-1.5 rounded-full border border-[#c0dbb0] hover:bg-[#eef8e6] disabled:opacity-50 transition-colors"
         >
           更新
         </button>
@@ -78,7 +78,7 @@ export function NewsFeed() {
       {loading && (
         <div className="flex flex-col items-center py-10 gap-3">
           <div className="h-10 w-10 rounded-full brand-wave animate-float" />
-          <p className="text-sm text-[#5a7a8f] animate-pulse-soft">
+          <p className="text-sm text-[#5e7a62] animate-pulse-soft">
             ベルマーレニュースを取得中...
           </p>
         </div>
@@ -97,16 +97,16 @@ export function NewsFeed() {
       )}
 
       {!loading && digest && (
-        <div className="rounded-2xl bg-gradient-to-br from-[#e8f6fc] via-white to-[#d5eef9] border border-[#b8d9eb] p-4">
-          <p className="text-xs font-bold text-[#0b2c4a] mb-2">AIダイジェスト</p>
-          <p className="text-sm text-[#0f2a3d] leading-relaxed whitespace-pre-wrap">
+        <div className="rounded-2xl bg-gradient-to-br from-[#eef8e6] via-white to-[#dcefcc] border border-[#c0dbb0] p-4">
+          <p className="text-xs font-bold text-[#1a4d28] mb-2">AIダイジェスト</p>
+          <p className="text-sm text-[#1a3320] leading-relaxed whitespace-pre-wrap">
             {digest}
           </p>
         </div>
       )}
 
       {!loading && !error && news.length === 0 && (
-        <div className="text-center py-10 text-[#5a7a8f]">
+        <div className="text-center py-10 text-[#5e7a62]">
           <p className="text-sm">直近24時間のニュースはありません</p>
         </div>
       )}
@@ -119,17 +119,17 @@ export function NewsFeed() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-4 rounded-2xl bg-white/80 border border-[#b8d9eb] hover:border-[#00a0e9] hover:bg-[#e8f6fc]/60 transition-colors"
+                className="block p-4 rounded-2xl bg-white/80 border border-[#c0dbb0] hover:border-[#7ac143] hover:bg-[#eef8e6]/60 transition-colors"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-sm font-bold text-[#0b2c4a] leading-snug">
+                  <h3 className="text-sm font-bold text-[#1a4d28] leading-snug">
                     {item.title}
                   </h3>
-                  <span className="shrink-0 text-[11px] text-[#5a7a8f]">
+                  <span className="shrink-0 text-[11px] text-[#5e7a62]">
                     {formatRelativeTime(item.publishedAt)}
                   </span>
                 </div>
-                <p className="mt-2 text-xs text-[#5a7a8f]">{item.source}</p>
+                <p className="mt-2 text-xs text-[#5e7a62]">{item.source}</p>
               </a>
             </li>
           ))}

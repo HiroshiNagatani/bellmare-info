@@ -49,4 +49,9 @@ export const OFFICIAL_LINKS = [
     url: "https://store.bellmare.co.jp/ja/",
     description: "ユニフォーム・応援グッズ",
   },
+  {
+    title: "マイページログイン",
+    url: "https://mypage.bm.fan-engagement.com/login",
+    description: "ＪリーグIDで会員マイページにログイン",
+  },
 ];
