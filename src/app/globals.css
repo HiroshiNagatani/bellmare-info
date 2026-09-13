@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --bell-blue: #00a0e9;
+  --bell-navy: #0b2c4a;
+  --bell-sky: #5ec8f2;
+  --bell-foam: #e8f6fc;
+  --bell-deep: #061824;
+  --bell-text: #0f2a3d;
+  --bell-muted: #5a7a8f;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(0, 160, 233, 0.35), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(94, 200, 242, 0.28), transparent 50%),
+    linear-gradient(165deg, #f3fafd 0%, #dceef8 45%, #c5e4f4 100%);
+  color: var(--bell-text);
+  min-height: 100vh;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 1.5s ease-in-out infinite;
+}
+
+@keyframes wave-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.brand-wave {
+  background: linear-gradient(
+    120deg,
+    var(--bell-navy) 0%,
+    var(--bell-blue) 40%,
+    var(--bell-sky) 70%,
+    var(--bell-navy) 100%
+  );
+  background-size: 200% 200%;
+  animation: wave-shift 8s ease-in-out infinite alternate;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.7s ease-out both;
+}
+
+.font-display {
+  font-family: var(--font-display), "Oswald", sans-serif;
+}
